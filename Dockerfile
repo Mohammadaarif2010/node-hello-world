@@ -1,14 +1,13 @@
 FROM node
 
-RUN apt-get update && apt-get upgrade -y \
-    && apt-get clean
+RUN yum update all -y
 
 RUN mkdir /app
 WORKDIR /app
 
 COPY package*.json /app/
 
-RUN npm install
+RUN yum install npm
 
 COPY src /app/src
 
