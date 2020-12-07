@@ -11,7 +11,7 @@ pipeline {
         git 'https://github.com/Mohammadaarif2010/node-hello-world.git'
       }
     }
-    stage('Build') {
+       /* stage('Build') {
        steps {
          sh 'npm install'
        }
@@ -20,7 +20,7 @@ pipeline {
       steps {
         sh 'npm test'
       }
-    }
+    } */
     stage('Building image') {
       steps{
         script {
@@ -37,5 +37,5 @@ pipeline {
         }
       }
     }
- }
+  }
 }
